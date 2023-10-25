@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
 import { Providers } from './providers'
+import { Divider, Flex, Icon, Box, Text, Link, Stack } from '@chakra-ui/react'
+import { scrollbarStyles } from './theme'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <body>
-                <Providers>{children}</Providers>
+                <Providers>
+                    <Box height="100vh" width="100vw">
+                        <Flex
+                            justifyContent="space-between"
+                            alignItems="center"
+                            px="10"
+                            py="6"
+                            bg="orange.200"
+                        >
+                            <Link href="/">
+                                <Text fontSize="2xl" fontWeight="bold">
+                                    WirSearch
+                                </Text>
+                            </Link>
+                            <Icon _hover={{ color: 'orange.400' }} />
+                        </Flex>
+                        <Divider />
+                        <Stack p="10" overflow="auto" css={scrollbarStyles}>
+                            {children}
+                        </Stack>
+                    </Box>
+                </Providers>
             </body>
         </html>
     )
