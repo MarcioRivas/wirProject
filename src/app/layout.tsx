@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         >
                             <Link href="/">
                                 <Text fontSize="2xl" fontWeight="bold">
-                                    WirSearch
+                                    IphoneWorld
                                 </Text>
                             </Link>
                             <Icon _hover={{ color: 'orange.400' }} />
