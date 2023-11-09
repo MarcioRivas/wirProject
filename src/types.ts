@@ -11,21 +11,3 @@ export interface Item {
     itemUrl: string
     platform: PlataformFilter
 }
-
-export interface EbayObject {
-    itemId: string;
-    title: string;
-    itemWebUrl: string;
-    price: {
-        value: string;
-        currency: string;
-    };
-    seller: {
-        username: string;
-        feedbackScore: number;
-    };
-    image: {
-        imageUrl: string;
-    };
-}
-
