@@ -22,12 +22,12 @@ function convertEbayToItem(ebayObjects: EbayItem[]): Item[] {
     return items
 }
 
-const convertMeliToItem = (products: MeliItem[]): Item[] => {
-    return products.map(product => {
+const convertMeliToItem = (products: MeliItem[], prevIndex: number): Item[] => {
+    return products.map((product, index) => {
         // You will need to extract the relevant data from the Product object
         // and map it to the Item interface here.
         const item: Item = {
-            id: Number(product.id), // Assuming the product ID can be converted to a number
+            id: index + prevIndex, // Assuming the product ID can be converted to a number
             price: product.price,
             name: product.title,
             description: '', // You need to fill in the description based on the product data
@@ -50,7 +50,7 @@ export const usePhones = () => {
         const ebayPhones = await getEbayPhones()
         const meliPhones = await getMeliPhones()
         const ebayItems = convertEbayToItem(ebayPhones.data.itemSummaries)
-        const meliItems = convertMeliToItem(meliPhones.results)
+        const meliItems = convertMeliToItem(meliPhones.results, ebayItems.length + 1)
 
         // for (let i = 0; i < ebayItems.length; i++) {
         //     await new Promise<void>((resolve) => {
