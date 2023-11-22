@@ -31,7 +31,7 @@ const convertMeliToItem = (products: MeliItem[], prevIndex: number): Item[] => {
             price: product.price,
             name: product.title,
             description: '', // You need to fill in the description based on the product data
-            seller: 'Unknown', // You need to fill in the seller information based on the product data
+            seller: product.seller.username, // You need to fill in the seller information based on the product data
             sellerStars: +(Math.random() * 5).toPrecision(2), // You need to fill in the seller stars/rating based on the product data
             productPhotoUrl: product.thumbnail,
             itemUrl: product.permalink,
@@ -51,16 +51,6 @@ export const usePhones = () => {
         const meliPhones = await getMeliPhones()
         const ebayItems = convertEbayToItem(ebayPhones.data.itemSummaries)
         const meliItems = convertMeliToItem(meliPhones.results, ebayItems.length + 1)
-
-        // for (let i = 0; i < ebayItems.length; i++) {
-        //     await new Promise<void>((resolve) => {
-        //         setTimeout(async () => {
-        //             const translatedName = await translate(ebayItems[i].name);
-        //             ebayItems[i].name = translatedName.data.translatedText;
-        //             resolve();
-        //         }, 10000);
-        //     });
-        // }
 
         return [...ebayItems, ...meliItems]
     }

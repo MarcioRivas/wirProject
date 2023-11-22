@@ -5,7 +5,7 @@ export interface Item {
     price: number
     name: string
     description: string
-    seller: string
+    seller?: string
     sellerStars: number
     productPhotoUrl: string
     itemUrl: string
