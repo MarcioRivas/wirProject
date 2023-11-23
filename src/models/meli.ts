@@ -4,7 +4,7 @@ export interface MeliItem {
     title: string
     seller: {
         id: number
-        username?: string
+        username: string
         power_seller_status: null | any // You can replace 'any' with the actual type
         car_dealer: boolean
         real_estate_agency: boolean

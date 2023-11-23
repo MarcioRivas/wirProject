@@ -15,6 +15,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 512 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -198,6 +199,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'Samsung Galaxy S22 Dual Sim 256 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -381,6 +383,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 128 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -564,6 +567,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 512 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -747,6 +751,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 128 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -930,6 +935,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 256 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -1113,6 +1119,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 128 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -1296,6 +1303,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 512 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,
@@ -1479,6 +1487,7 @@ export const MOCKED_MELI_RESPONSE: MeliResponse = {
             title: 'iPhone 15 Dual Sim 128 Gb Negro',
             seller: {
                 id: 451257294,
+                username: 'STOREUY TIENDA',
                 power_seller_status: null,
                 car_dealer: false,
                 real_estate_agency: false,

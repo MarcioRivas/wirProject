@@ -5,8 +5,7 @@ export interface Item {
     price: number
     name: string
     description: string
-    seller?: string
-    sellerStars: number
+    seller: string
     productPhotoUrl: string
     itemUrl: string
     platform: PlataformFilter

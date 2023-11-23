@@ -40,7 +40,6 @@ const ItemCard: React.FC<ItemCardProps> = ({ item }) => {
         })}
       </Text>
       <Text>By: {item.seller}</Text>
-      <Badge colorScheme="green">Seller score: {item.sellerStars}</Badge>
     </Stack>
   );
 };

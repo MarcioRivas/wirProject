@@ -2,7 +2,6 @@ import { EbayItem } from '@/models/ebay'
 import { MeliItem } from '@/models/meli'
 import useEbayService from '@/services/useEbayService'
 import useMercadolibreService from '@/services/useMercadolibreService'
-import useTranslateService from '@/services/useTranslateService'
 import { Item } from '@/types'
 
 function convertEbayToItem(ebayObjects: EbayItem[]): Item[] {
@@ -13,7 +12,6 @@ function convertEbayToItem(ebayObjects: EbayItem[]): Item[] {
             name: ebayObj.title,
             description: '', // You might need to fill this with appropriate values from eBay object
             seller: ebayObj.seller.username,
-            sellerStars: ebayObj.seller.feedbackScore,
             productPhotoUrl: ebayObj.image.imageUrl,
             itemUrl: ebayObj.itemWebUrl,
             platform: 'Ebay',
@@ -32,7 +30,6 @@ const convertMeliToItem = (products: MeliItem[], prevIndex: number): Item[] => {
             name: product.title,
             description: '', // You need to fill in the description based on the product data
             seller: product.seller.username, // You need to fill in the seller information based on the product data
-            sellerStars: +(Math.random() * 5).toPrecision(2), // You need to fill in the seller stars/rating based on the product data
             productPhotoUrl: product.thumbnail,
             itemUrl: product.permalink,
             platform: 'Mercado Libre',
@@ -42,7 +39,6 @@ const convertMeliToItem = (products: MeliItem[], prevIndex: number): Item[] => {
 }
 
 export const usePhones = () => {
-    // const { translate } = useTranslateService()
     const { getPhones: getEbayPhones } = useEbayService()
     const { getPhones: getMeliPhones } = useMercadolibreService()
 
